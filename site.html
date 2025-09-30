@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário RM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulário RM</h1>
+    <main>
+      <form id="formulario">
+        <p>Nome do paciente: <input type="text" id="nome" placeholder="digite o nome do paciente" size="50px"></p>
+        <p>Idade do paciente: <input type="number" name="idade" id="idade" min="0" placeholder="000"></p>
+        <p>Peso: <input type="number" name="peso" id="peso" placeholder="00"> kg</p>
+        <p>Altura: <input type="number" name="altura" id="altura" min="100" max="300" placeholder="000"> cm</p>
+        <p>Gênero:
+          <input type="radio" id="masculino" name="sexo" value="masculino" checked>
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="feminino" name="sexo" value="feminino">
+          <label for="feminino">Feminino</label> </p>
+        <textarea id="obs" rows="5" cols="37" placeholder="Digite as observações aqui..."></textarea>
+      </form>
+      <p>
+        <button onclick="salvarTXT()">Salvar</button>
+        <button onclick="limparCampos()">Limpar</button>
+      </p>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

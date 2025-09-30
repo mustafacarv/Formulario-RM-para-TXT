@@ -1,0 +1,6 @@
+body {background-color: green;}
+h1 {text-align: center; color: white;}
+main {background-color: white;width: 400px; margin: auto; padding: 20px; border-radius: 10px;box-shadow: 3px 3px 3px rgb(0, 67, 0);}
+input#idade {width: 40px;}
+input#peso {width: 40px;}
+input#altura {width: 40px;}
