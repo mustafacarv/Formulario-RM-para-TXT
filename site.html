@@ -6,23 +6,120 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Formulário RM</h1>
+  <h1>Questionário de Ressonância Magnética</h1>
     <main>
       <form id="formulario">
-        <p>Nome do paciente: <input type="text" id="nome" placeholder="digite o nome do paciente" size="50px"></p>
-        <p>Idade do paciente: <input type="number" name="idade" id="idade" min="0" placeholder="000"></p>
-        <p>Peso: <input type="number" name="peso" id="peso" placeholder="00"> kg</p>
-        <p>Altura: <input type="number" name="altura" id="altura" min="100" max="300" placeholder="000"> cm</p>
-        <p>Gênero:
-          <input type="radio" id="masculino" name="sexo" value="masculino" checked>
-          <label for="masculino">Masculino</label>
-          <input type="radio" id="feminino" name="sexo" value="feminino">
-          <label for="feminino">Feminino</label> </p>
+
+        <nav>Dados do paciente</nav>
+        <section class="dados do paciente">
+          <p>Nome completo do paciente:
+            <input type="text" id="nome" size="50px"></p>
+          <p>Matrícula:
+            <input type="text" id="nome" size="7px"></p>
+          <p>Data de nascimento:
+            <input type="date" name="nascimento" id="nascimento"></p>
+          <p>Idade:
+            <input type="number" name="idade" id="idade" min="0"></p>
+          <p>Peso:
+            <input type="number" name="peso" id="peso" max="120"> kg</p>
+          <p>Altura:
+            <input type="number" name="altura" id="altura" min="100" max="300"> cm</p>
+          <p>Gênero:
+            <input type="radio" id="masculino" name="sexo" value="masculino" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="feminino">Feminino</label> </p>
+        </section>
+        
+        <br>
+        
+        <section class="dados do exame">
+          <nav>Dados do exame</nav>
+          <p>Talão de pagamento:
+            <input type="text" id="nome" size="7px"></p>
+          <p>Talão de agendamneto:
+            <input type="text" id="nome" size="7px"></p>
+        </section>
+        
+        <section class="perguntas gerais">
+          <h3>Você possui algum dos itens abaixo:</h3>
+          <p><input type="checkbox" name="" id="">Marca-passo cardíaco ou desfibrilador implantável</p> <!--PEDIR AUTORIZAÇÃO-->
+          <p><input type="checkbox" name="" id="">Clipes metálicos no cérebro (Aneurisma)</p> <!--PEDIR AUTORIZAÇÃO-->
+          <p><input type="checkbox" name="" id="">Implantes cocleares ou auditivos</p> <!--IMPOSSIVEL REALIZAR-->
+          <p><input type="checkbox" name="" id="">Prótese ou válvula cardíaca metálica</p>
+          <p><input type="checkbox" name="" id="">Neuroestimulador ou bomba de infusão</p>
+          <p><input type="checkbox" name="" id="">Pinos, placas, blocos ou parafusos metálicos.</p>
+          <p><input type="checkbox" name="" id="">Tatuagens recentes ou maquiagem definitiva (menos de 30 dias)</p>
+          <p><input type="checkbox" name="" id="">Outros dispositivos metálicos/eletrônicos implantáveis (Stent Cardíaco)</p>
+          <p><input type="checkbox" name="" id="">Já realizou Ressonância Magnética anteriormente?</p>
+            Teve alguma reação?
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+              
+          <p>Apresenta claustrofobia ou ansiedade extrema?</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+            <input type="radio" name="uso_medicamento_controlada" id=""> Uso medicamento controlado
+          <p><input type="checkbox" name="" id="">Está utilizando algum medicamento atualmente?</p>
+            Quais?
+            <input type="text">
+          <p><input type="checkbox" name="" id="">Possui diagnóstico de câncer, endometriose ou doença ginecológica?</p>
+            Qual? 
+            <input type="text">
+        </section>
+        
+        <br>
+        
         <textarea id="obs" rows="5" cols="37" placeholder="Digite as observações aqui..."></textarea>
+
+        <nav>Em caso de contraste, preencher obrigatoriamente</nav>
+        <section class="contraste">
+          <p><input type="checkbox" name="" id="">Está em jejum conforme orientação (4 a 6 horas)?</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+          <p><input type="checkbox" name="" id="">Tem insuficiência renal diagnosticada?</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+            <input type="radio" name="não" id=""> Não sei
+          <p><input type="checkbox" name="" id="">Realizou exames de creatinina e ureia nos últimos 30 dias?</p>
+            <input type="radio" name="sim" id=""> Sim
+              Valor da creatinina: <input type="number" name="" id=""> mg/dL
+            <input type="radio" name="não" id=""> Não
+          <p><input type="checkbox" name="" id="">Possui alergia conhecida a contraste (gadolínio)?</p>
+            <input type="radio" name="sim" id=""> Sim
+              Caso sim, descreva: <input type="text">.
+            <input type="radio" name="não" id=""> Não
+        </section>
+
+        <nav>Mulheres, preencher obrigatoriamente</nav>
+        <section class="mulheres">
+          <p><input type="checkbox" name="" id=""> Está grávida ou com suspeita de gravidez?</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+            <input type="radio" name="não" id=""> Desconheço
+          <p>Quando foi a última mestruação <input type="date" name="" id=""></p>
+          <p><input type="checkbox" name="" id="">Está amamentando??</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+          <p><input type="checkbox" name="" id=""> DIU (dispositivo intrauterino)</p>
+            <input type="radio" name="sim" id=""> Sim
+            <input type="radio" name="não" id=""> Não
+        </section>
+        <h2>Declaração do paciente</h2>
+        <p>Declaro que as informações acima são verdadeiras, estou ciente dos riscos e autorizo a realização do exame</p>
+        <p>Assinatura do paciente/responsável:______________________________________Data: <input type="date" name="" id=""></p>
+        <br>
+        <p>Observações técnicas:</p>
+        <p>______________________________________________________________________________________</p>
+        <p>______________________________________________________________________________________</p>
+        <p>______________________________________________________________________________________</p>
+
+
       </form>
       <p>
         <button onclick="salvarTXT()">Salvar</button>
         <button onclick="limparCampos()">Limpar</button>
+        <button id="imprimir" onclick="imprimir()">Imprimir</button>
       </p>
     </main>
 
